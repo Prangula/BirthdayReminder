@@ -47,7 +47,7 @@
             />
 
         <ImageView
-            android:id="@+id/item_logo"
+            android:id="@+id/item_image"
             android:layout_width="40dp"
             android:layout_height="40dp"
             tools:src="@drawable/baseline_android_24"
@@ -55,21 +55,6 @@
             android:layout_marginTop="25dp"
             />
 
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Days"
-            android:textColor="@color/white"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="5dp"
-            android:textStyle="bold"
-            android:textSize="14sp"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="30dp"
-            />
 
         <TextView
             android:id="@+id/item_time"
