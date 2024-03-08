@@ -69,6 +69,7 @@ class BirthdayCardActivity : AppCompatActivity() {
         item_et_time.visibility = View.GONE
         item_title.text = "Happy Birthday"
 
+
         item_et_switch.setOnCheckedChangeListener { compoundButton, isChecked ->
 
             if (isChecked) {
@@ -93,7 +94,6 @@ class BirthdayCardActivity : AppCompatActivity() {
             time()
         }
 
-
         radioGroup()
 
         item_save.setOnClickListener {
@@ -105,7 +105,7 @@ class BirthdayCardActivity : AppCompatActivity() {
                     item_to.text.toString(),
                     imageUri.toString(),
                     item_time.text.toString(),
-                    R.color.red
+                    color!!
                 )
 
                 viewModel.insert(item)
@@ -190,34 +190,41 @@ class BirthdayCardActivity : AppCompatActivity() {
 
         item_radiogroup_color.setOnCheckedChangeListener { radioGroup, i ->
 
-         when(i){
+       when(i){
 
                 R.id.item_et_red -> {
                     item_card_main.setCardBackgroundColor(ContextCompat.getColor(this,R.color.red))
+                    color = R.color.red
                 }
 
                 R.id.item_et_blue -> {
                     item_card_main.setCardBackgroundColor(ContextCompat.getColor(this,R.color.blue))
+                    color = R.color.blue
                 }
 
                 R.id.item_et_yellow -> {
                     item_card_main.setCardBackgroundColor(ContextCompat.getColor(this,R.color.yellow))
+                    color = R.color.yellow
                 }
 
                 R.id.item_et_pink -> {
                     item_card_main.setCardBackgroundColor(ContextCompat.getColor(this,R.color.pink))
+                    color = R.color.pink
                 }
 
                 R.id.item_et_green -> {
                     item_card_main.setCardBackgroundColor(ContextCompat.getColor(this,R.color.green))
+                    color = R.color.green
                 }
 
                 R.id.item_et_black -> {
                     item_card_main.setCardBackgroundColor(ContextCompat.getColor(this,R.color.black))
+                    color = R.color.black
                 }
 
                 R.id.item_et_orange -> {
                     item_card_main.setCardBackgroundColor(ContextCompat.getColor(this,R.color.orange))
+                    color = R.color.orange
                 }
 
 
@@ -298,4 +305,6 @@ class BirthdayCardActivity : AppCompatActivity() {
 
         }
     }
+
+
 }

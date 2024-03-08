@@ -1,5 +1,6 @@
 package com.example.birthdayreminder1.adapter
 
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,7 +46,27 @@ class BirthdayAdapter(var items:List<BirthdayItem>
 
         holder.itemView.main_item_delete.setOnClickListener {
 
-            viewModel.delete(item)
+            val alertDialog = AlertDialog.Builder(holder.itemView.context)
+            alertDialog.setTitle("Do you want to delete?")
+            alertDialog.setMessage("Are you sure?")
+            alertDialog.setCancelable(false)
+
+            alertDialog.setPositiveButton("Yes"){dialog,_->
+
+                viewModel.delete(item)
+                dialog.dismiss()
+
+            }
+
+            alertDialog.setNegativeButton("No"){dialog,_->
+
+                dialog.dismiss()
+
+            }
+
+            val dialog = alertDialog.create()
+            dialog.show()
+
 
         }
 

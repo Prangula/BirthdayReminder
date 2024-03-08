@@ -12,7 +12,7 @@ data class BirthdayItem(
     var to:String = "",
     var image:String = "",
     var time:String = "",
-    var color:Int = 0,
+    var color:Int = R.color.pink,
     @PrimaryKey(autoGenerate = true)
     var id:Int?=null
 
